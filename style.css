@@ -72,7 +72,8 @@ img {
     left: 0;
   }
   #fibonac {
-    margin: 25px 5px;
+    width: 375px;
+    margin: 10px auto;
   }
 }
 @media (max-width: 400px) {
