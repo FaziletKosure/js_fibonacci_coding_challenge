@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>Fibonacci number</title>
   </head>
   <body>
     <h1>FIBONACCI IN THE NATURE</h1>
     <div id="slider-container">
-      <h1>FIBONACCI IN THE NATURE</h1>
       <div class="slide">
         <img src="./images1/13a.jpg" alt="" />
         <img src="./images1/14a.jpg" alt="" />
@@ -26,22 +26,19 @@
         <img src="./images1/11a.jpg" alt="" />
       </div>
     </div>
-  </dv>
+  </div>
  
     <div id="fibonac">
-      <h2>FIBONACCI NUMBER</h2>
-      <form action="">
-        <label for="fibNum">Enter a number: </label>
-        <input type="number" id="fibNum" class="fibNum" required />
-        <input type="submit" value="CHECK" class="" id="findFibNum" />
-        <div id="result"></div>
-      </form>
+
+      <h2>Fibonacci Generator </h2>
+
+<input type="number" id="myNumber" value="" min="0" max="100" autofocus>
+<button id="checkbtn" onclick="myFunction()">Try it</button>
+
+
+<p id="demo"></p>
     </div>
-    <!-- <img src="images1/circle.png" alt="" class="small-icon1" />
-    <img src="images1/circle.png" alt="" class="small-icon2" />
-    <img src="images1/square.png" alt="" class="small-icon3" />
-    <img src="images1/circle.png" alt="" class="small-icon4" />
-    <img src="images1/square.png" alt="" class="small-icon5" /> -->
+    <iframe frameborder="0" width="100%" height="500px" src="https://repl.it/@FaziletKosure/PracticalStarkSimulation?lite=true"></iframe>
     <script src="app.js"></script>
   </body>
 </html>

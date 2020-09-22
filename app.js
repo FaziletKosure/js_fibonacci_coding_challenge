@@ -1,3 +1,6 @@
+window.onload = function() {
+    document.getElementById("myNumber").focus();
+  }
 //Slider
 let amountImg=13;
 let widthImg=1400;
@@ -13,35 +16,55 @@ function doSlider() {
     
 }
 // FIBONACCI NUMBER
-
-
-let findFibNum=document.getElementById("findFibNum");
-let result=document.getElementById("result");
-console.log(result);
-findFibNum.addEventListener("click",fibonacci,false);
-
-function fibonacci(num) {
-    let fibNum=document.getElementById("fibNum").value;
-    console.log(fibNum);
-    var num1=0;
-    var num2=1;
-    var sum;
-    var i = 0;
-    for (let i = 0; i < num; i++) {
-        sum=num1+num2;
-        num1=num2;
-        num2=sum;
-      
+const myNumber=document.getElementById("myNumber");
+const checkbtn=document.getElementById("checkbtn");
+myNumber.addEventListener("keyup", function(evt) {          // Keyup -> Any key pressed
+    if (evt.keyCode == 13) {  
+        evt.preventDefault();                        // 13 for enter
+        checkbtn.click();
     }
-    return num2;
-   
-  
-    
+  });
 
+
+  function ordinal_suffix_of(i) {
+    var j = i % 10,
+        k = i % 100;
+    if (j == 1 && k != 11) {
+        return i + "st";
+    }
+    if (j == 2 && k != 12) {
+        return i + "nd";
+    }
+    if (j == 3 && k != 13) {
+        return i + "rd";
+    }
+    return i + "th";
 }
 
-alert(fibonacci(5))
-console.log(fibonacci(fibNum));
-// result.innerHTML=fibonacci(fibNum)
-
-
+function myFunction() {
+    var n = myNumber.value;
+    const fib=fibonacciGenerator (n);
+    const suffix=ordinal_suffix_of(n);
+    if (n<0){
+        document.getElementById("demo").innerHTML='Please enter only positive integers!';
+    }else{
+        document.getElementById("demo").innerHTML = suffix+" element of the fibonacci sequence is "+fib;
+    }
+    myNumber.value="";
+    // myNumber.focus();
+}
+ 
+function fibonacciGenerator (num) {
+    let num1=0; 
+    let num2=1; 
+    let sum; 
+ 
+    if (num==0) return 0;
+    for (i = 2; i < num; i++)  
+    { 
+        sum=num1+num2; 
+        num1=num2; 
+        num2=sum; 
+    } 
+    return num2; 
+}
