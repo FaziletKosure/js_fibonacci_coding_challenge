@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
   background: linear-gradient(45deg, #22046b, #e14e42);
   font-family: "Roboto", sans-serif;
+  /* overflow: hidden; */
   /* background-image: url(./images1/background.jpg); */
 }
 #slider-container {
@@ -60,4 +61,17 @@ img {
 
 #demo {
   padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .slide img,
+  .slide {
+    width: 700px !important;
+  }
+  h1 {
+    left: 0;
+  }
+  #fibonac {
+    margin: 25px 5px;
+  }
 }

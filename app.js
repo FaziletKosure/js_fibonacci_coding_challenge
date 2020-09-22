@@ -2,8 +2,13 @@ window.onload = function() {
     document.getElementById("myNumber").focus();
   }
 //Slider
+if (window.matchMedia("(min-width: 600px)").matches) {
+    var widthImg=1400;
+} else {
+    var widthImg=700;
+}
 let amountImg=13;
-let widthImg=1400;
+
 let deltaX=0;
 const sliderContainer=document.querySelector("#slider-container");
 window.setInterval(doSlider,3000);
