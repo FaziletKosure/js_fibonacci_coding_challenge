@@ -67,7 +67,7 @@ function fibonacciGenerator (num) {
     let sum; 
  
     if (num==0) return 0;
-    for (i = 2; i < num; i++)  
+    for (i = 1; i < num; i++)  
     { 
         sum=num1+num2; 
         num1=num2; 
