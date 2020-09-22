@@ -4,8 +4,10 @@ window.onload = function() {
 //Slider
 if (window.matchMedia("(min-width: 600px)").matches) {
     var widthImg=1400;
-} else {
+}else if (window.matchMedia("(min-width: 400px)").matches) {
     var widthImg=700;
+} else {
+    var widthImg=350;
 }
 let amountImg=13;
 

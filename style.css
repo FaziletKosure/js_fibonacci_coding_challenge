@@ -75,3 +75,9 @@ img {
     margin: 25px 5px;
   }
 }
+@media (max-width: 400px) {
+  .slide img,
+  .slide {
+    width: 350px !important;
+  }
+}
